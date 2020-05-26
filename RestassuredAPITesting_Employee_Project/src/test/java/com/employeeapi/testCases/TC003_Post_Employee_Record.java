@@ -43,7 +43,7 @@ public class TC003_Post_Employee_Record extends TestBase{
 		logger.info("*********Started TC003_Post_Employee_Record **********");
 		
 		RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1";
-		httpRequest = RestAssured.given();
+	//httpRequest = RestAssured.given();
 
 		// JSONObject is a class that represents a simple JSON. We can add Key-Value pairs using the put method
 		//{"name":"John123X","salary":"123","age":"23"}
@@ -52,14 +52,15 @@ public class TC003_Post_Employee_Record extends TestBase{
 		requestParams.put("salary", empSalary);
 		requestParams.put("age", empAge);
 		
-		// Add a header stating the Request body is a JSON
-		httpRequest.header("Content-Type", "application/json");
+	// Add a header stating the Request body is a JSON
+		//httpRequest.header("Content-Type", "application/json");
 
 		// Add the Json to the body of the request
-		httpRequest.body(requestParams.toJSONString());
+		//httpRequest.body(requestParams.toJSONString());
 
-		response = httpRequest.request(Method.POST, "/create");
+		//response = httpRequest.request(Method.POST, "/create");
 		
+		response=RestAssured.given().header("Content-Type", "application/json").body(requestParams.toJSONString()).when().post("/create");
 		Thread.sleep(5000);
 
 	}
@@ -68,6 +69,7 @@ public class TC003_Post_Employee_Record extends TestBase{
 	void checkResposeBody()
 	{
 		String responseBody = response.getBody().asString();
+		System.out.println(responseBody);
 		Assert.assertEquals(responseBody.contains(empName), true);
 		Assert.assertEquals(responseBody.contains(empSalary), true);
 		Assert.assertEquals(responseBody.contains(empAge), true);

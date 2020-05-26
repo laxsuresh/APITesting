@@ -488,3 +488,9 @@
 2019-05-15 14:52:20 INFO  EmployeesRestAPI:116 - *********  Finished TC004_Put_Employee_Record **********
 2019-05-15 14:52:20 INFO  EmployeesRestAPI:38 - *********Started TC005_Delete_Employee_Record **********
 2019-05-15 14:52:25 INFO  EmployeesRestAPI:103 - *********  Finished TC005_Delete_Employee_Record **********
+2020-05-21 13:52:29 INFO  EmployeesRestAPI:43 - *********Started TC003_Post_Employee_Record **********
+2020-05-21 13:52:47 INFO  EmployeesRestAPI:117 - *********  Finished TC003_Post_Employee_Record **********
+2020-05-21 13:55:31 INFO  EmployeesRestAPI:43 - *********Started TC003_Post_Employee_Record **********
+2020-05-21 13:55:42 INFO  EmployeesRestAPI:117 - *********  Finished TC003_Post_Employee_Record **********
+2020-05-21 13:58:34 INFO  EmployeesRestAPI:43 - *********Started TC003_Post_Employee_Record **********
+2020-05-21 13:58:44 INFO  EmployeesRestAPI:118 - *********  Finished TC003_Post_Employee_Record **********

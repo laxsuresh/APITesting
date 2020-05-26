@@ -21,6 +21,8 @@ import org.testng.annotations.*;
 import com.employeeapi.base.TestBase;
 
 import io.restassured.RestAssured;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -50,6 +52,19 @@ public class TC001_Get_All_Employees extends TestBase{
 		String responseBody = response.getBody().asString();
 		logger.info("Response Body==>"+responseBody);
 		Assert.assertTrue(responseBody!=null);
+		
+		
+		
+		/*Headers head=response.headers();
+		
+		for(Header he:head){
+			
+			he.getName();
+			he.getValue();
+			
+			
+		}
+		*/
 		
 	}
 		
